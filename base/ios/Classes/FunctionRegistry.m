@@ -98,9 +98,9 @@ static NSDictionary<NSString *, NSObject <LocationMethodHandler> *> *_locationDi
 + (NSDictionary<NSString *, NSObject <LocationMethodHandler> *> *)locationMethodHandler {
     if (!_locationDictionary) {
         _locationDictionary = @{
-                @"location#init": [Init alloc],
-                @"location#startLocate": [StartLocate alloc],
-                @"location#stopLocate": [StopLocate alloc],
+                @"location#init": [[Init alloc] init],
+                @"location#startLocate": [[StartLocate alloc] init],
+                @"location#stopLocate": [[StopLocate alloc] init],
         };
     }
     return _locationDictionary;
